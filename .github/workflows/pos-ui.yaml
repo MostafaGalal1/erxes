@@ -8,6 +8,7 @@ on:
       - rc
       - staging
       - v1
+      - omz
     paths:
       - 'pos/**'
       - '.github/workflows/pos-ui.yaml'
@@ -43,7 +44,7 @@ jobs:
           yarn build
 
       - name: Build docker image
-        if: github.event_name == 'push' && ( github.ref == 'refs/heads/master' || github.ref == 'refs/heads/rc' || github.ref == 'refs/heads/dev' || github.ref == 'v2')
+        if: github.event_name == 'push' && ( github.ref == 'refs/heads/master' || github.ref == 'refs/heads/rc' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/omz')
         run: |
           cd pos
           echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
