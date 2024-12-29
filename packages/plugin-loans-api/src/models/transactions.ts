@@ -412,15 +412,7 @@ export const loadTransactionClass = (models: IModels) => {
 
       const config: IConfig = await getConfig("loansConfig", subdomain);
 
-      const paymentInfo = await getCalcedAmounts(
-        models,
-        subdomain,
-        {
-          contractId: id,
-          payDate: today
-        },
-        config
-      );
+      const paymentInfo = await getCalcedAmounts(models, subdomain, id, today, config);
 
       let {
         payment = 0,

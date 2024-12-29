@@ -71,11 +71,6 @@ export const LEASE_TYPES = {
   ALL: ['finance', 'salvage', 'linear', 'credit', 'saving']
 };
 
-export const STORED_INTEREST_TYPES = {
-  STORED_INTEREST: 'storedInterest',
-  OUT_BALANCE: 'outBalance'
-};
-
 export const INTEREST_CORRECTION_TYPE = {
   STOP_INTEREST: 'stopInterest',
   INTEREST_RETURN: 'interestReturn',
@@ -84,10 +79,10 @@ export const INTEREST_CORRECTION_TYPE = {
 };
 
 export const COLLATERAL_TYPE = {
-  MOVABLE_ASSETS:'movableAssets',
-  REAL_ESTATE:'realEstate',
-  SECURITIES_CONTRACTS:'securitiesContracts',
-  SAVING:'saving',
-  WARRANTY:'warranty',
-  OTHER:'other'
+  MOVABLE_ASSETS: 'movableAssets',
+  REAL_ESTATE: 'realEstate',
+  SECURITIES_CONTRACTS: 'securitiesContracts',
+  SAVING: 'saving',
+  WARRANTY: 'warranty',
+  OTHER: 'other'
 }

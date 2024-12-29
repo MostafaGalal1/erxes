@@ -87,14 +87,6 @@ export const scheduleSchema = schemaHooksWrapper(
       label: 'Loan Interest Nonce',
       optional: true
     }),
-    payment: field({ type: Number, label: 'Loan Payment', optional: true }),
-    insurance: field({
-      type: Number,
-      min: 0,
-      label: 'Insurance',
-      optional: true
-    }),
-    debt: field({ type: Number, min: 0, label: 'Debt', optional: true }),
     commitmentInterest: field({
       type: Number,
       min: 0,
@@ -111,6 +103,14 @@ export const scheduleSchema = schemaHooksWrapper(
       label: 'Loan commitmentInterest Nonce',
       optional: true
     }),
+    payment: field({ type: Number, label: 'Loan Payment', optional: true }),
+    insurance: field({
+      type: Number,
+      min: 0,
+      label: 'Insurance',
+      optional: true
+    }),
+    debt: field({ type: Number, min: 0, label: 'Debt', optional: true }),
     total: field({ type: Number, label: 'Total Payment' }),
     didLoss: field({
       type: Number,

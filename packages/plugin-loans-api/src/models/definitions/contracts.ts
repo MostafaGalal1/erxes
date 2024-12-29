@@ -48,6 +48,7 @@ export interface IContract {
   description: string;
   createdBy: string;
   createdAt: Date;
+
   marginAmount?: number;
   givenAmount?: number;
   loanBalanceAmount: number;
@@ -60,10 +61,12 @@ export interface IContract {
   interestRate: number;
   lossPercent: number;
   repayment: string;
+  
   startDate: Date;
   firstPayDate: Date;
   endDate: Date;
   scheduleDays: number[];
+
   insuranceAmount: number;
   /**
    * @property {number} debt loan debit amount it will be chance to lender can pay lower than main payment amount
@@ -118,6 +121,8 @@ export interface IContract {
   currency: string;
   storedInterest: number;
   lastStoredDate: Date;
+  commitmentInterest: number;
+  
   isPayFirstMonth: boolean;
   downPayment: number;
   isBarter: boolean;
@@ -128,7 +133,6 @@ export interface IContract {
   stoppedInterestDate: Date;
   loanPurpose: string;
   leaseType: string;
-  commitmentInterest: number;
   savingContractId: string;
   customFieldsData?: ICustomField[];
   holidayType: HolidayType;

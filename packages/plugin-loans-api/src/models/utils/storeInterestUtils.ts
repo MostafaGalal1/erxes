@@ -10,7 +10,7 @@ export async function storeInterestContract(
   storeDate: Date,
   models: IModels,
   periodLockId: string,
-  config:IConfig
+  config: IConfig
 ) {
   const beginDate = getFullDate(contract.lastStoredDate);
   const invDate = getFullDate(storeDate);
@@ -31,21 +31,21 @@ export async function storeInterestContract(
     balance: contract.loanBalanceAmount,
     interestRate: contract.interestRate,
     dayOfMonth: diffDay,
-    fixed:config.calculationFixed
+    fixed: config.calculationFixed
   });
 
   if (storeInterestAmount > 0) {
 
-    const storeInterest:IStoredInterest = {
-      amount:storeInterestAmount,
+    const storeInterest: IStoredInterest = {
+      amount: storeInterestAmount,
       contractId: contract._id,
       invDate: invDate,
       prevStoredDate: contract.lastStoredDate,
-      commitmentInterest:0,
+      commitmentInterest: 0,
       periodLockId,
       number: contract.number,
-      description:'',
-      type:''
+      description: '',
+      type: ''
     }
 
     await models.StoredInterest.create(storeInterest);
